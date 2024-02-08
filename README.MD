@@ -2,14 +2,14 @@
 
 <p align="center"><img src="./assets/cover_1.webp" /></p>
 
-> This repository correspond to the graduation phase of the DAO Adventure. To check out the complete DAO Adventure repository, [click here](https://github.com/motoko-bootcamp/dao-adventure).
+> This repository corresponds to the graduation phase of the DAO Adventure. To check out the complete DAO Adventure repository, [click here](https://github.com/motoko-bootcamp/dao-adventure).
 
 ## Important resources 📌
 
 - [Motoko Bootcamp Dashboard](https://www.motokobootcamp.com/) (Click on **Login** to access)
 - [Motoko Bootcamp Discord](https://discord.gg/qEF2W3dBrd)
 - [Graduation Notion Guide](https://tomahawkvc.notion.site/Motoko-Bootcamp-Graduation-f31b9b7a89ed434abf6a96510450ab36)
-- [Graduation Video Guide] - COMING SOON
+- [Graduation Video Guide](https://www.youtube.com/watch?v=onwvvi5EUi8)
 
 ## Motivation 💭
 
@@ -17,7 +17,7 @@ A DAO, which stands for Decentralized Autonomous Organization, is a new type of 
 
 <p align="center"><img src="./assets/cover_2.png" /></p>
 
-**DAOs** are the biggest innovation in the field of governance since the invention of the [LLC](https://www.investopedia.com/terms/l/llc.asp) or perhaps even democracy itself. Just like the **steam engine** made the **Industrial Revolution** possible by harnessing **physical powe**r, DAOs harness **political power** and make a Web3 revolution possible. This could fundamentally change how we organize resources, people and capital with the end goal of creating a more stable, flourishing, collaborative and fair civilisation.
+**DAOs** are the biggest innovation in the field of governance since the invention of the [LLC](https://www.investopedia.com/terms/l/llc.asp) or perhaps even democracy itself. Just like the **steam engine** made the **Industrial Revolution** possible by harnessing **physical power**, DAOs harness **political power** and make a Web3 revolution possible. This could fundamentally change how we organize resources, people and capital with the end goal of creating a more stable, flourishing, collaborative and fair civilisation.
 
 ## Mission 🎯
 
@@ -35,7 +35,7 @@ You have two available options:
 
    > [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/motoko-bootcamp/dao-adventure-graduation)
 
-> GitPod is a cloud-based development environment. We will use it to access and edit the project files directly from the web browser. That way you don’t have to install any additional software or worry about setting up your development environment locally. If you are facing issues with GitPod try the followings: Switch to another browser (Firefox is recommended) | Empty your cache and do a hard reset | Use Incognito Mode.
+> GitPod provides a cloud-based development environment accessible directly from your web browser. This means you can edit project files without the need to install extra software or configure your local development environment. If you encounter issues with GitPod, try the following troubleshooting steps: switch to another browser (Firefox is recommended), clear your cache and perform a hard reset, or use Incognito Mode.
 
 2. Run this repository locally. You'll need to install the [DFINITY Canister SDK](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html) to do so and setup your environment. You can find a detailed guide on how to do so [here](https://www.youtube.com/watch?v=DTDP7WYU07w). Then simply download this repository and open it in your favorite IDE.
 
@@ -74,10 +74,10 @@ You have two available options:
 
 - The `yesOrNo` field of the `Vote` object is a `Bool` representing whether a vote is meant to approve or refuse a proposal. `true` represents a vote in favor of a proposal and `false` represents a vote against a proposal.
 - When a member votes on a proposal, his voting power is added or substracted to the `voteScore` variable of the `Proposal` object.
-- A proposal is automatically accepted if the `voteScore` reaches 100 or more. A proposal is automatically rejected if the `voteScore` reaches 100 or less. A stays open as long as it's not approved or rejected.
+- A proposal is automatically accepted if the `voteScore` reaches 100 or more. A proposal is automatically rejected if the `voteScore` reaches -100 or less. A vote stays open as long as it's not approved or rejected.
 - Approved proposals are automatically executed.
 
-> For instance if a mentor with a token balance of 15 MBC votes on a proposal with a `true` vote - 75 will be added to the `voteScore`. Assuming the `voteScore` was originally at 30, the `voteScore` is now at 105 and the proposal is accepted and executed.
+> For example, if a mentor possessing 15 Motoko Bootcamp Tokens (MBT) casts a vote in favor of a proposal (true), their vote contributes 75 to the voteScore due to the 5x multiplier for mentors' votes. If the voteScore before this vote was 30, it would increase to 105 after the vote is counted. Consequently, the proposal reaches the acceptance threshold and is successfully implemented.
 
 6. **Proposal Types**
 
@@ -88,7 +88,7 @@ They are 3 types of proposal:
 - `AddMentor`: those proposals contain a `Principal` that if approved will be come a mentor of the DAO. Whenever such a proposal is created, we need to verify that the specified principal is a **Graduate** of the DAO, as only **Graduate** can become **Mentors**. If the proposal is approved the changes should be reflected on the **DAO** canister.
 
 7. **Initial Setup**:
-   The initial setup of the DAO should include an initial mentor to ensure that theo DAO is operational:
+   The initial setup of the DAO should include an initial mentor to ensure that your DAO is operational:
 
 - **Mentor**:
   - Name: **Motoko Bootcamp**
@@ -155,7 +155,7 @@ actor {
 
 Head over to the [Motoko Bootcamp Dashboard](https://www.motokobootcamp.com/), section **Submit**, **Graduation** and input your canister ID. You should submit the canister ID of your **DAO** canister.
 
-Upon submitting your project, to determine if you have gratuated or not, a few tests will be automatically performed on your **DAO canister**. Those tests will take between 20 and 30 seconds.
+Upon submitting your project, to determine if you have graduated or not, a few tests will be automatically performed on your **DAO canister**. Those tests will take between 20 and 30 seconds.
 
 1. Do not interact with the **DAO** canister during the testing phase.
 2. Strictly respect the interface and types that are defined and provided in this repository. Any modification will result in a failed test.
