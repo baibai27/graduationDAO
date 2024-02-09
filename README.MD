@@ -91,7 +91,7 @@ They are 3 types of proposal:
    The initial setup of the DAO should include an initial mentor to ensure that your DAO is operational:
 
 - **Mentor**:
-  - Name: **Motoko Bootcamp**
+  - Name: **motoko_bootcamp**
   - Associated Principal: `gth2f-eyaaa-aaaaj-qa2pq-cai` (Canister ID of the dashboard).
 
 > You can decide to hardcode the initial setup or create an external that will be executed canister upon deployment.
