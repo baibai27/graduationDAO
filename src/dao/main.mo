@@ -13,7 +13,8 @@ actor DAO {
         type HttpRequest = Types.HttpRequest;
         type HttpResponse = Types.HttpResponse;
 
-        stable let canisterIdWebpage : Principal = Principal.fromText("rrkah-fqaaa-aaaaa-aaaaq-cai"); // TODO: Change this to the ID of your webpage canister
+        // The principal of the Webpage canister associated with this DAO canister (needs to be updated with the ID of your Webpage canister)
+        stable let canisterIdWebpage : Principal = Principal.fromText("aaaaa-aa");
         stable var manifesto = "Your manifesto";
         stable let name = "Your DAO";
         stable var goals = [];
@@ -77,9 +78,9 @@ actor DAO {
                 return #err("Not implemented");
         };
 
-        // Returns the Principal ID of the Webpage canister associated with this DAO
+        // Returns the Principal ID of the Webpage canister associated with this DAO canister
         public query func getIdWebpage() : async Principal {
-                return Principal.fromText("aaaaa-aa");
+                return canisterIdWebpage;
         };
 
 };

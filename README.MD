@@ -43,7 +43,7 @@ You have two available options:
 
 1. **Double canisters**: this project is made up of two different canisters.
 
-- The **Webpage** canister - this canister serves a webpage.
+- The **Webpage** canister - this canister serves a webpage that displays the DAO's manifesto (a simple text page).
 - The **DAO** canister - this canister manages the member of the DAO, the voting system, the manifesto and the goals of the DAO.
 
 2. **Membership and Token Allocation**:
@@ -143,10 +143,7 @@ The interface of your **Webpage** canister should **strictly** respect the follo
 
 ```motoko
 actor {
-    getManifesto : shared query () -> async Text;
     setManifesto : shared (manifesto : Text) -> async Result<(), Text>;
-    getGoals : shared query () -> async [Text];
-    addGoal : shared (goal : Text) -> async Result<(), Text>;
     http_request : shared query (request : HttpRequest) -> async HttpResponse;
 }
 ```
