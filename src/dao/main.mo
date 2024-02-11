@@ -1,6 +1,7 @@
 import Result "mo:base/Result";
 import Text "mo:base/Text";
 import Principal "mo:base/Principal";
+import Nat "mo:base/Nat";
 import Types "types";
 actor DAO {
 
@@ -44,8 +45,8 @@ actor DAO {
 
         // Get the member with the given principal
         // Returns an error if the member does not exist
-        public query func getMember(p : Principal) : async Result<Member, Text> {
-                return #err("Not implemented");
+        public query func getMember(p : Principal) : async Result<Member, Nat> {
+                return #err(5);
         };
 
         // Graduate the student with the given principal
@@ -57,8 +58,8 @@ actor DAO {
 
         // Create a new proposal and returns its id
         // Returns an error if the caller is not a mentor or doesn't own at least 1 MBC token
-        public shared ({ caller }) func createProposal(content : ProposalContent) : async Result<ProposalId, Text> {
-                return #err("Not implemented");
+        public shared ({ caller }) func createProposal(content : ProposalContent) : async Result<Text, Text> {
+                return #ok("To be implemented");
         };
 
         // Get the proposal with the given id
